@@ -18,6 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::get('/books', 'Api\LibraryController@index');
+
 // Route::get('clientdata', 'ClientController@index');
 // // Route::post('deleteClientData', 'ClientController@delete');
 // Route::post('deleteClientData/{id}', 'ClientController@delete');

@@ -23,5 +23,6 @@ Auth::routes();
 Route::get('/testrelations', 'TeststuffController@testRelations');
 
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/parser', 'Api\GoodreadsController@parser');
 // Route::get('/testrel', 'TestrelController@index');
+Route::get('books', 'LibraryController@index');

@@ -19,8 +19,8 @@ class CreateAudiobooksTable extends Migration
             $table->string('author');
             $table->string('title');
             $table->string('book_series');
-            $table->string('series_nr');
             $table->string('genre');
+            $table->string('rating');
             $table->text('description_short');
             $table->text('description_large');
             $table->string('cover_image');
