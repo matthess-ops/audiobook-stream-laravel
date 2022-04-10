@@ -24,7 +24,7 @@ class GoodreadsController extends Controller
 
         $coverImageUrl = $dom->find('#coverImage',0)->src;
         $contents = file_get_contents($coverImageUrl);
-        $name ="cover_images/". substr($coverImageUrl, strrpos($coverImageUrl, '/') + 1);
+        $name ="public/cover_images/". substr($coverImageUrl, strrpos($coverImageUrl, '/') + 1);
         Storage::put($name, $contents);
         $coverImagePath = $name;
 
