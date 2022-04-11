@@ -12,12 +12,23 @@ class LibraryController extends Controller
 {
     public function index(){
         error_log("LibraryController index function called");
-        // return Audiobook::all();
-        $books = Audiobook::paginate(10);
+        $books = Audiobook::paginate(5);
 
 
         return LibraryIndexResource::collection(
             $books);
 
+    }
+
+    public function scrollIndex($from,$to){
+        error_log("scrollindex function called");
+        // $booksChunk = Audiobook::findMany([2, 3]);
+        // error_log("adfadsf".$booksChunk);
+        
+        // error_log("werkt dit");
+        $books = Audiobook::paginate(3);
+
+        return LibraryIndexResource::collection(
+            $books);
     }
 }

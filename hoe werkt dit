@@ -5,7 +5,7 @@ https://blog.codecourse.com/setting-up-laravel-sanctum-airlock-for-spa-authentic
 opletten dat je laravel server als http://localhost:8000/ launched
 
 
-php artisan serve --host=localhost --port=8000
+php artisan serve --host=localhost --port=8081
 
 fakery tutorial die werkt
 

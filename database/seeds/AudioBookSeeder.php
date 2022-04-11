@@ -51,7 +51,7 @@ class AudioBookSeeder extends Seeder
             'genre' => "genre_series-audiobook_".$audioBook,
             'description_short' => "description_short-audiobook_".$audioBook,
             'description_large' => "description_large-audiobook_".$audioBook,
-            'cover_image' => "public/cover_images/5._SY475_.jpg",
+            'cover_image' => "public/cover_images/testimage.jpg",
             'audio_file' => "audio_file-audiobook_".$audioBook,
             'rating'=> "audio_file-audiobook_".$audioBook,
             'created_at'=>Carbon::now(),
