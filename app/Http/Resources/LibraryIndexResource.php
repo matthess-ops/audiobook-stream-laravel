@@ -21,7 +21,7 @@ class LibraryIndexResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description_short' => $this->description_short,
-            'cover_image' => 'http://localhost:8081'. Storage::url($this->cover_image)
+            'cover_image' =>  $this->cover_image
         ];
     }
 }

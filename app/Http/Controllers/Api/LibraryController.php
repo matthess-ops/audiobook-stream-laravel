@@ -20,15 +20,31 @@ class LibraryController extends Controller
 
     }
 
-    public function scrollIndex($from,$to){
+    public function scrollIndex(){
         error_log("scrollindex function called");
-        // $booksChunk = Audiobook::findMany([2, 3]);
-        // error_log("adfadsf".$booksChunk);
-        
-        // error_log("werkt dit");
+
         $books = Audiobook::paginate(3);
 
         return LibraryIndexResource::collection(
             $books);
+    }
+
+    public function search($query){
+        error_log("search is called");
+        $books = Audiobook::where('title', 'LIKE', '%'.$query.'%')->paginate(3);
+
+        // $books = Audiobook::where('title', 'LIKE', '%'."EVEN".'%')->paginate(3);
+
+
+
+        return LibraryIndexResource::collection(
+            $books);
+    }
+
+    public function delete($id){
+        error_log("removing book ".$id);
+        $book = Audiobook::find($id);
+        $book->delete();
+        // return response()
     }
 }

@@ -20,8 +20,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/books', 'Api\LibraryController@index');
-Route::get('/scrollbooks/{from}/{to}', 'Api\LibraryController@scrollIndex');
-
+Route::get('/scrollbooks', 'Api\LibraryController@scrollIndex');
+Route::get('/books/search/{query}', 'Api\LibraryController@search');
+Route::delete('/book/{id}', 'Api\LibraryController@delete');
 
 // Route::get('clientdata', 'ClientController@index');
 // // Route::post('deleteClientData', 'ClientController@delete');

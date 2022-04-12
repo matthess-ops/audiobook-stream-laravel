@@ -44,14 +44,26 @@ class AudioBookSeeder extends Seeder
 
 
       for ($audioBook=1; $audioBook < 16; $audioBook++) {
+
+
+        $title = "even";
+        if($audioBook % 2 == 0){
+            $title = "_EVEN_";
+        }
+        else{
+            $title = "_ODD_";
+        }
+
+
         DB::table('audiobooks')->insert([
             'author' => "author-audiobook_".$audioBook,
-            'title' => "title-audiobook_".$audioBook,
+
+            'title' => "search".$title."title_".$audioBook,
             'book_series' => "book_series-audiobook_".$audioBook,
             'genre' => "genre_series-audiobook_".$audioBook,
             'description_short' => "description_short-audiobook_".$audioBook,
             'description_large' => "description_large-audiobook_".$audioBook,
-            'cover_image' => "public/cover_images/testimage.jpg",
+            'cover_image' => "http://localhost:8000/storage/test_image.jpg",
             'audio_file' => "audio_file-audiobook_".$audioBook,
             'rating'=> "audio_file-audiobook_".$audioBook,
             'created_at'=>Carbon::now(),
