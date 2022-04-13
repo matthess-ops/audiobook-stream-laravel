@@ -47,4 +47,9 @@ class LibraryController extends Controller
         $book->delete();
         // return response()
     }
+
+    public function show($id){
+        $book = Audiobook::find($id);
+        return $book;
+    }
 }

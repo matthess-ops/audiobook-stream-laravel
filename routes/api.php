@@ -23,6 +23,7 @@ Route::get('/books', 'Api\LibraryController@index');
 Route::get('/scrollbooks', 'Api\LibraryController@scrollIndex');
 Route::get('/books/search/{query}', 'Api\LibraryController@search');
 Route::delete('/book/{id}', 'Api\LibraryController@delete');
+Route::get('/books/{id}','Api\LibraryController@show');
 
 // Route::get('clientdata', 'ClientController@index');
 // // Route::post('deleteClientData', 'ClientController@delete');
