@@ -6,6 +6,7 @@ opletten dat je laravel server als http://localhost:8000/ launched
 
 
 php artisan serve --host=localhost --port=8081
+php artisan serve --host=localhost --port=8000
 
 fakery tutorial die werkt
 

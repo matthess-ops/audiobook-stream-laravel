@@ -26,3 +26,13 @@ Route::get('/testrelations', 'TeststuffController@testRelations');
 Route::get('/parser', 'Api\GoodreadsController@parser');
 // Route::get('/testrel', 'TestrelController@index');
 Route::get('books', 'LibraryController@index');
+
+
+Route::get('/getaudio', [
+    'as' => 'audio',
+    'uses' => 'Api\AudioPlayerController@stream'
+]);
+
+
+// Route::get('/getaudio', 'AudioPlayerController@stream');
+

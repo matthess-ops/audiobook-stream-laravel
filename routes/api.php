@@ -25,6 +25,20 @@ Route::get('/books/search/{query}', 'Api\LibraryController@search');
 Route::delete('/book/{id}', 'Api\LibraryController@delete');
 Route::get('/books/{id}','Api\LibraryController@show');
 
+
+Route::post('/setplaylist', 'Api\AudioPlayerController@setToListening');
+Route::get('/playlist/{id}','Api\AudioPlayerController@read');
+
+
+Route::post('/updateplaytime', 'Api\AudioPlayerController@updatePlayTime');
+
+// Route::get('/getaudio', [
+//     'as' => 'audio',
+//     'uses' => 'AudioPlayerController@stream'
+// ]);
+
+// /api/updateplaytime
+
 // Route::get('clientdata', 'ClientController@index');
 // // Route::post('deleteClientData', 'ClientController@delete');
 // Route::post('deleteClientData/{id}', 'ClientController@delete');
